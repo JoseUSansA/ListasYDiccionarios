@@ -36,4 +36,4 @@ for i in range(cantidad_pilotos):
 print(f"¡La flota estelar cuenta con {contador_comandantes} Comandantes Galácticos y {contador_cadete} Cadetes Estelares!")
 
 for p in pilotos:
-    print(f"Piloto: {p["nombre_piloto"]} | Nivel: {p["nivel_piloto"]}")
+    print(f"Piloto: {p["nombre_piloto"]} | Nivel: {p["nivel_piloto"]}") 
