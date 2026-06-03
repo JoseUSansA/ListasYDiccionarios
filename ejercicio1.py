@@ -1,10 +1,30 @@
 contador_comandantes = 0
 contador_cadete = 0
-cantidad_pilotos = int(input("Ingrese cantidad de pilotos: "))
+
+while True:
+    try:
+        cantidad_pilotos = int(input("Ingrese cantidad de pilotos: "))
+        if cantidad_pilotos>0:
+            break
+        print("Error: debe ser un número positivo.")
+    except ValueError:
+        print("Error: debe ingresar un número entero.")
 
 for i in range(cantidad_pilotos):
-    nombre = input("Ingrese nombre del piloto: ")
-    nivel = int(input("Ingrese nivel del piloto: "))
+    while True:
+        nombre = input("Ingrese nombre del piloto: ").strip()
+        if len(nombre)>=6 and " " not in nombre:
+            break
+        print("Error: el nombre debe tener al menos 6 caracteres y sin espacios")
+
+    while True:
+        try:
+            nivel = int(input("Ingrese nivel del piloto: "))
+            if nivel>0:
+                break
+            print("Error: debe ser un número positivo.")
+        except ValueError:
+            print("Error: debe ser un número entero.")
 
     if nivel > 40:
         contador_comandantes += 1
